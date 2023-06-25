@@ -1,0 +1,31 @@
+server:
+  port: 8090
+  
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://eureka-service:8761/eureka/
+  instance:
+    hostname: gateway-service
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: supplier-service
+          uri: lb://supplier-service
+          predicates:
+            - Path=/supplier/**
+        - id: fileupload-service
+          uri: lb://fileupload-service
+          predicates:
+            - Path=/fileupload/**
+        - id: summary-service
+          uri: lb://summary-service
+          predicates:
+            - Path=/summary/**
