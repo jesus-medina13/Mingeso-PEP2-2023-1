@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 public class Acopio {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String fecha;
     private String turno;
-    private String codigo;
-    private String kls_leche;
+    private int codigo;
+    private int kls_leche;
 
 }

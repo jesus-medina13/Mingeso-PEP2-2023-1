@@ -13,8 +13,8 @@ public class Acopio2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String codigo;
-    private String grasa;
-    private String solido_total;
+    private int codigo;
+    private float grasa;
+    private float solido_total;
 
 }

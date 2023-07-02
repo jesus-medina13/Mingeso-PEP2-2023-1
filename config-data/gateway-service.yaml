@@ -17,15 +17,15 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: supplier-service
-          uri: lb://supplier-service
+        - id: proveedor-service
+          uri: lb://proveedor-service
           predicates:
-            - Path=/supplier/**
-        - id: fileupload-service
-          uri: lb://fileupload-service
+            - Path=/proveedor/**
+        - id: acopio-service
+          uri: lb://acopio-service
           predicates:
-            - Path=/fileupload/**
-        - id: summary-service
-          uri: lb://summary-service
+            - Path=/acopio/**
+        - id: planilla-service
+          uri: lb://planilla-service
           predicates:
-            - Path=/summary/**
+            - Path=/planilla/**
