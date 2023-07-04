@@ -62,9 +62,10 @@ const ProveedoresComponent = () => {
   const [proveedores, setProveedores] = useState([]);
 
   useEffect(() => {
-    axios.get("/proveedor")
+    axios.get("http://localhost:8080/proveedor")
       .then(response => response.data)
-      .then(data => {
+      .then(data => { 
+        console.log(data)
         setProveedores(data);
       })
       .catch(error => {

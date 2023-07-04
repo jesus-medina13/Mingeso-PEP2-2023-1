@@ -35,7 +35,7 @@ public class PlanillaService {
     }
 
     public Acopio2[] getAcopios2(){
-        Acopio2[] acopios2 = restTemplate.getForObject("http://acopio-service/acopio/acopio2", Acopio2[].class);
+        Acopio2[] acopios2 = restTemplate.getForObject("http://acopio-service/acopio/getAcopio2", Acopio2[].class);
         return acopios2;
     }
 

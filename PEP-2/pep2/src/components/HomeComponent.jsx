@@ -37,7 +37,7 @@ export default function Home() {
         <Link to="/proveedor">
           <button style={buttonStyle}>Proveedores</button>
         </Link>
-        <Link to="/subir-archivo">
+        <Link to="/acopio">
           <button style={buttonStyle}>Subir Archivo</button>
         </Link>
         <Link to="/planilla">

@@ -74,7 +74,7 @@ const ProveedorCreateComponent = () => {
       retencion
     };
 
-    axios.post("/proveedor/create", proveedorData)
+    axios.post("http://localhost:8080/proveedor", proveedorData)
       .then(response => {
         console.log('Proveedor agregado:', response.data);
         // Realizar cualquier acción adicional después de agregar el proveedor

@@ -22,5 +22,13 @@ public class ProveedorService {
     public void crearProveedor(Proveedor proveedor) {
         proveedorRepository.save(proveedor);
     }
+    public void guardarProveedor(int codigo, String nombre, String categoria, String retencion){
+        Proveedor proveedor = new Proveedor();
+        proveedor.setCodigo(codigo);
+        proveedor.setNombre(nombre);
+        proveedor.setCategoria(categoria);
+        proveedor.setRetencion(retencion);
+        proveedorRepository.save(proveedor);
+    }
 
 }
