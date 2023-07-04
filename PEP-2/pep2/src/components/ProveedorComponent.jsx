@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 import background from '../images/cows.jpg';
@@ -61,7 +62,7 @@ const ProveedoresComponent = () => {
   const [proveedores, setProveedores] = useState([]);
 
   useEffect(() => {
-    axios.get("/supplier")
+    axios.get("/proveedor")
       .then(response => response.data)
       .then(data => {
         setProveedores(data);
@@ -78,12 +79,6 @@ const ProveedoresComponent = () => {
           <span className="navbar-brand mb-0">
             <h1>MilkStgo</h1>
           </span>
-          <a className="btn btn-outline-light" href="/supplier/create" role="button">
-            <span className="button-text">Ingresar Proveedor</span>
-          </a>
-          <a className="btn btn-outline-light" href="/" role="button">
-            <span className="button-text">Volver</span>
-          </a>
         </div>
       </div>
       <TableContainer>
@@ -108,6 +103,14 @@ const ProveedoresComponent = () => {
           </tbody>
         </Table>
       </TableContainer>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <Link to="/proveedor/create">
+          <button style={buttonStyle}>Ingresar Proveedor</button>
+        </Link>
+        <Link to="/">
+          <button style={buttonStyle}>Volver</button>
+        </Link>
+    </div>
     </MainContainer>
   );
 };

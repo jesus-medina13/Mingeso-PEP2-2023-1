@@ -34,7 +34,7 @@ export default function Home() {
     <MainContainer>
       <h1 style={{ titleStyle }}>MILKSTGO</h1>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-        <Link to="/proveedores">
+        <Link to="/proveedor">
           <button style={buttonStyle}>Proveedores</button>
         </Link>
         <Link to="/subir-archivo">

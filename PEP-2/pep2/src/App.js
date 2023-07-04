@@ -1,7 +1,8 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomeComponent from './components/HomeComponent';
-import ProveedoresComponent from './components/ProveedoresComponent';
+import ProveedorComponent from './components/ProveedorComponent';
+import ProveedorCreateComponent from './components/ProveedorCreateComponent';
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeComponent/>}/>
-          <Route path="/proveedores" element={<ProveedoresComponent/>}/>
+          <Route path="/proveedor" element={<ProveedorComponent/>}/>
+          <Route path="/proveedor/create" element={<ProveedorCreateComponent/>}/>
         </Routes>
       </BrowserRouter>
     </div>
