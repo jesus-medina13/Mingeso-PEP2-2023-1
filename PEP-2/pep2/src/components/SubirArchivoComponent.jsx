@@ -65,7 +65,7 @@ const SubirArchivoComponent = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      axios.post('/acopio', formData)
+      axios.post('http://localhost:8080/acopio', formData)
         .then(response => {
           console.log('Archivo subido:', response.data);
           // Realizar cualquier acción adicional después de subir el archivo
@@ -86,7 +86,7 @@ const SubirArchivoComponent = () => {
         <Input type="file" accept=".csv" onChange={handleFileChange} />
       </FormGroup>
       <Button onClick={handleUpload}>Subir</Button>
-      <Link to="/proveedores">
+      <Link to="/">
         <Button>Volver</Button>
       </Link>
     </FormContainer>

@@ -1,7 +1,7 @@
 import axios from "axios";
 class AcopioService {
     subirArchivo(archivo){
-        return axios.post(`gateway-service:8090/acopio`, archivo);
+        return axios.post(`localhost:8080/acopio`, archivo);
     }
 }
 

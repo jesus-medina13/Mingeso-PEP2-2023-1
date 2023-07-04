@@ -3,7 +3,7 @@ import axios from "axios";
 class ProveedorService {
     
     guardarProveedor(proveedor){
-        return axios.post(`gateway-service:8090/proveedor`, proveedor);
+        return axios.post(`localhost:8080/proveedor`, proveedor);
     }
 }
 

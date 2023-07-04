@@ -107,6 +107,7 @@ const ProveedorCreateComponent = () => {
           <Input type="text" value={retencion} onChange={(e) => setRetencion(e.target.value)} />
         </FormGroup>
         <Button type="submit" onClick={handleSubmit}>Guardar</Button>
+      
       </form>
     </FormContainer>
     </MainContainer>
